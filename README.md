@@ -24,3 +24,7 @@
 
 ➜ Aggregate is used to represent the concepts about my domain that can't be representeed by a single entity or value-objects, for example the `customer` is a `person` and `customer` can buy a `product` and also `customer` can perform `transaction` <br>
 ➜ Aggregate's data shouldn't be exposed outside the aggregate to other sub-domains, thats why I decided to keep its paramters as lowercase defined.
+
+### **Factory Pattern ?**
+
+➜ I used the factory pattern because its used to encapsulate a complex business logic inside functions for creating domain instances without needing from the client-code to know anything about the actual implementation details.
