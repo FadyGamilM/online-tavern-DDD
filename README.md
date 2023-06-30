@@ -28,3 +28,16 @@
 ### **Factory Pattern ?**
 
 ➜ I used the factory pattern because its used to encapsulate a complex business logic inside functions for creating domain instances without needing from the client-code to know anything about the actual implementation details.
+
+# Application Structure & Design Decisions
+
+### Repository
+
+➜ Repository is responsible of managing one aggregate.
+➜ Its best practise to loosly couple your repos, so one repo manage one aggregate.
+
+![repos design](./repos.png)
+
+### Services
+
+➜ Serivce is responsible of coupling/gathering the loosly coupled repositories togeather to fullfill the business need

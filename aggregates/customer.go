@@ -16,7 +16,7 @@ type Customer struct {
 }
 
 // Factory Method Pattern to create a new aggregate
-func NewCustomer(customer_name string, customer_age int) (Customer, error) {
+func New(customer_name string, customer_age int) (Customer, error) {
 	if customer_name == "" {
 		return Customer{}, helpers.ErrInvalidPersonName{ErrMsg: "customer must have a valid name"}
 	}
