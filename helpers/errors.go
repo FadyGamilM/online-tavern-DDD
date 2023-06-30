@@ -15,3 +15,11 @@ type ErrInvalidPersonAge struct {
 func (e ErrInvalidPersonAge) Error() string {
 	return e.ErrMsg
 }
+
+type ErrMissingEssentialData struct {
+	ErrMsg string
+}
+
+func (e ErrMissingEssentialData) Error() string {
+	return e.ErrMsg
+}
