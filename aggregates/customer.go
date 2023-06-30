@@ -35,3 +35,16 @@ func NewCustomer(customer_name string, customer_age int) (Customer, error) {
 	return Customer{person: person, drinks: drinks, transactions: transactions}, nil
 
 }
+
+// exposed methods to deal with the customer aggregate without exposing its internal impl
+func (c *Customer) GetID() uuid.UUID {
+	return c.person.ID
+}
+
+func (c *Customer) GetName() string {
+	return c.person.Name
+}
+
+func (c *Customer) GetAge() int {
+	return c.person.Age
+}

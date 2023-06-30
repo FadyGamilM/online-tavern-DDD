@@ -12,12 +12,24 @@ type ErrCustomerNotFound struct {
 	ErrMsg string
 }
 
+func (e ErrCustomerNotFound) Error() string {
+	return e.ErrMsg
+}
+
 type ErrFailedToAddCustomer struct {
 	ErrMsg string
 }
 
+func (e ErrFailedToAddCustomer) Error() string {
+	return e.ErrMsg
+}
+
 type ErrFailedToUpdateCustomer struct {
 	ErrMsg string
+}
+
+func (e ErrFailedToUpdateCustomer) Error() string {
+	return e.ErrMsg
 }
 
 type ErrFailedToDeleteCustomer struct {
